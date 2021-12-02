@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import App from './App';
 
 // Mount funtion to start ip the application
 const mount = (el) => {
-   ReactDom.render(
-    <h1>Hi there</h1>,
-    el
-   );
+   ReactDom.render(<App />,el);
 };
 
 // If we are in development and in isolation,
