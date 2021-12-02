@@ -7,8 +7,8 @@
   "dependencies": {
     "chart.js": "^2.9.4",
     "primeflex": "^2.0.0",
-    "primeicons": "^4.0.0",
-    "primevue": "^3.0.1",
+    "primeicons": "^5.0.0",
+    "primevue": "^3.9.1",
     "vue": "^3.0.0"
   },
   "devDependencies": {
