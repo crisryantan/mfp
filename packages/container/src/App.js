@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import {
   StylesProvider,
@@ -16,6 +16,7 @@ const generateClassName = createGenerateClassName({
 });
 
 export default () => {
+
   return (
     <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
