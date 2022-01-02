@@ -7,8 +7,7 @@ import App from './App';
 const mount = (el, { onNavigate, defaultHistory }) => {
   const history = defaultHistory || createMemoryHistory();
 
-  // if authApp is ran in isolation
-  if(onNavigate) {
+  if (onNavigate) {
     history.listen(onNavigate);
   }
 
@@ -16,10 +15,9 @@ const mount = (el, { onNavigate, defaultHistory }) => {
 
   return {
     onParentNavigate({ pathname: nextPathname }) {
-      const { pathname } = history.location
+      const { pathname } = history.location;
 
-      // prevent infinite loop when navigating
-      if(pathname !== nextPathname) {
+      if (pathname !== nextPathname) {
         history.push(nextPathname);
       }
     },
@@ -32,10 +30,7 @@ if (process.env.NODE_ENV === 'development') {
   const devRoot = document.querySelector('#_auth-dev-root');
 
   if (devRoot) {
-    mount(devRoot, {
-      // browser history in isolation
-      defaultHistory: createBrowserHistory(),
-    });
+    mount(devRoot, { defaultHistory: createBrowserHistory() });
   }
 }
 
